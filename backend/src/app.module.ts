@@ -3,8 +3,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UserModule } from './user/user.module';
-import { TeamModule } from './team/team.module';
+import { UsersModule } from './user/user.module';
+import { TeamsModule } from './team/team.module';
 import { TaskModule } from './task/task.module';
 import { User } from './user/user.entity';
 import { Team } from './team/team.entity';
@@ -27,8 +27,8 @@ import { Task } from './task/task.entity';
         synchronize: true,
       }),
     }),
-    UserModule,
-    TeamModule,
+    UsersModule,
+    TeamsModule,
     TaskModule,
   ],
   controllers: [AppController],
